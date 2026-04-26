@@ -1,4 +1,4 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
@@ -38,11 +38,16 @@
         .time-table th, .time-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
         .time-table th { background: #1a1a1a; color: white; }
         .time-table td { background: #f9f9f9; }
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 25px; }
-        .cert-item { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: white; padding: 10px; transition: 0.3s; }
-        .cert-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-        .cert-item img { width: 100%; height: auto; border-radius: 8px; display: block; }
-        .cert-item h4 { text-align: center; margin-top: 12px; color: #FF6B00; font-size: 16px; }
+        
+        /* নতুন ফোল্ডার স্টাইল সার্টিফিকেট */
+        .certificate-folder { background: linear-gradient(135deg, #fff5f0 0%, #fff 100%); border: 2px solid #FFE4D6; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 8px 25px rgba(255,107,0,0.08); }
+        .certificate-folder h3 { text-align: center; color: #FF6B00; font-size: 22px; margin-bottom: 25px; }
+        .cert-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .cert-item { text-align: center; }
+        .cert-item img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12); transition: 0.3s; border: 3px solid #fff; }
+        .cert-item img:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+        .cert-item p { margin-top: 10px; font-size: 14px; color: #666; font-weight: 600; }
+        
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 25px; }
         .gallery-item { border-radius: 8px; overflow: hidden; height: 250px; background: #eee; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
@@ -72,7 +77,8 @@
             .trust-bar span { display: block; margin: 5px 0; }
             .map-container { height: 250px; }
             .gallery-item { height: 200px; }
-            .cert-grid { grid-template-columns: 1fr; }
+            .cert-gallery { grid-template-columns: 1fr; }
+            .certificate-folder { padding: 20px; }
         }
     </style>
 </head>
@@ -95,21 +101,27 @@
     <div class="container">
         <div class="section">
             <h2>সরকারি স্বীকৃতি ও অ্যাফিলিয়েশন</h2>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <img src="cert-msme.jpg" alt="MSME Certificate">
-                    <h4>MSME Certified - UDYAM-WB-16-0024830</h4>
-                </div>
-                <div class="cert-item">
-                    <img src="cert-chhaya.jpg" alt="Chhaya School of Art Certificate">
-                    <h4>Chhaya School of Art - Reg: 2093</h4>
-                </div>
-                <div class="cert-item">
-                    <img src="cert-startup.jpg" alt="Startup India Certificate">
-                    <h4>Startup India Certified</h4>
+            
+            <!-- নতুন ফোল্ডার স্টাইল -->
+            <div class="certificate-folder">
+                <h3>🏆 আমাদের সরকারি সার্টিফিকেট সমূহ</h3>
+                <div class="cert-gallery">
+                    <div class="cert-item">
+                        <img src="cert-msme.jpg" alt="MSME Udyam Registration Certificate">
+                        <p>MSME Certified</p>
+                    </div>
+                    <div class="cert-item">
+                        <img src="cert-chhaya.jpg" alt="Chhaya School of Art Affiliation">
+                        <p>Chhaya School of Art Affiliated</p>
+                    </div>
+                    <div class="cert-item">
+                        <img src="cert-startup.jpg" alt="Startup India Certificate">
+                        <p>Startup India Recognized</p>
+                    </div>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 25px; font-size: 18px;"><strong>Established 2014 | Principal: Sujit Karmakar</strong></p>
+            
+            <p style="text-align: center; margin-top: 30px; font-size: 18px;"><strong>Established 2014 | Principal: Sujit Karmakar</strong></p>
         </div>
         <div class="section">
             <h2>আমাদের অনুষ্ঠান ও স্টুডেন্টদের মুহূর্ত</h2>
@@ -178,6 +190,7 @@
             <div class="info-box"><ul><li>ভর্তির পর কম করে 6 মাস ক্লাস করতে হবে।</li><li>ভর্তির আগে গিটার কিনে নিতে হবে।</li><li>প্রতিদিন 1 ঘন্টা করে বাড়িতে প্র্যাকটিস বাধ্যতামূলক।</li><li>বিনা কারণে 2 দিনের বেশি ক্লাস অফ করলে Application দিতে হবে।</li><li>বিশেষ কারণে রবিবার ক্লাস মিস করলে ওই মাসের যেকোনো মঙ্গলবার ক্লাস করা যাবে।</li></ul></div>
             <div class="highlight" style="margin-top: 20px;"><strong>ফোন করার সময়:</strong> সকাল 10:00 AM থেকে রাত 9:00 PM <br><strong>WhatsApp করার সময়:</strong> সকাল 9:00 AM থেকে রাত 11:00 PM</div>
         </div>
+    </div>
     <footer class="footer">
         <h2>Sargam Guitar Center</h2>
         <p><strong>প্রোপ্রাইটার:</strong> Sujit Karmakar</p>
@@ -196,4 +209,4 @@
         <p style="margin-top: 30px; opacity: 0.6; font-size: 14px;">UDYAM-WB-16-0024830 | Est. 2014 | © 2026 Sargam Guitar Center</p>
     </footer>
 </body>
-</html>       
+</html>
