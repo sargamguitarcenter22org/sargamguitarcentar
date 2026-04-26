@@ -3,43 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sargam Guitar Center - Medinipur</title>
+    <title>Sargam Guitar Center - Medinipur এর #1 Guitar Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        .header { background: #1a1a1a; color: white; padding: 20px; text-align: center; }
-        .header h1 { margin: 0; font-size: 2.5em; }
-        .header p { margin: 5px 0 0; font-size: 1.2em; color: #f39c12; }
-        .container { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; }
-        .section { margin-bottom: 30px; }
-        .section h2 { border-bottom: 2px solid #f39c12; padding-bottom: 10px; color: #1a1a1a; }
-        .contact { background: #1a1a1a; color: white; padding: 20px; text-align: center; border-radius: 8px; }
-        .btn { background: #f39c12; color: #1a1a1a; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 10px; margin-right: 10px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Hind Siliguri', sans-serif; color: #1a1a1a; line-height: 1.6; }
+        
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                        url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1200') center/cover;
+            color: white; 
+            text-align: center; 
+            padding: 120px 20px 100px;
+        }
+        .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 15px; line-height: 1.2; }
+        .hero .tagline { font-size: 22px; margin-bottom: 10px; color: #FF6B00; font-weight: 600; }
+        .hero .trust { font-size: 16px; margin-bottom: 35px; opacity: 0.9; }
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn { 
+            padding: 15px 32px; text-decoration: none; border-radius: 8px; 
+            font-weight: 600; font-size: 18px; transition: 0.3s;
+        }
+        .btn-whatsapp { background: #25D366; color: white; }
+        .btn-call { background: #FF6B00; color: white; }
+        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        
+        /* Container */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section { margin-bottom: 60px; }
+        .section h2 { 
+            font-size: 36px; text-align: center; margin-bottom: 40px; 
+            position: relative; padding-bottom: 15px;
+        }
+        .section h2:after {
+            content: ''; position: absolute; bottom: 0; left: 50%; 
+            transform: translateX(-50%); width: 80px; height: 4px; background: #FF6B00;
+        }
+        
+        /* Course Cards */
+        .course-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; margin-top: 20px;
+        }
+        .course-card { 
+            border: 2px solid #eee; border-radius: 12px; padding: 30px; 
+            transition: 0.3s; position: relative;
+        }
+        .course-card:hover { border-color: #FF6B00; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .course-card.popular { border-color: #FF6B00; }
+        .badge { 
+            position: absolute; top: -12px; right: 20px; background: #FF6B00; 
+            color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; font-weight: 600;
+        }
+        .course-card h3 { font-size: 24px; margin-bottom: 10px; color: #FF6B00; }
+        .price { font-size: 32px; font-weight: 700; margin: 15px 0; }
+        .course-card ul { list-style: none; margin: 20px 0; }
+        .course-card li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .course-card li:before { content: '✅ '; }
+        .btn-card { 
+            display: block; background: #1a1a1a; color: white; text-align: center; 
+            padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 20px;
+        }
+        
+        /* Why Us */
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
+        .feature { padding: 20px; }
+        .feature-icon { font-size: 48px; margin-bottom: 15px; }
+        .feature h3 { font-size: 20px; margin-bottom: 10px; }
+        
+        /* Footer Contact */
+        .footer { background: #1a1a1a; color: white; padding: 50px 20px; text-align: center; }
+        .footer h2 { color: white; margin-bottom: 30px; }
+        .footer p { margin: 10px 0; font-size: 18px; }
+        .footer .btn-group { margin-top: 25px; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero .tagline { font-size: 18px; }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Sargam Guitar Center</h1>
-        <p>Medinipur এ গিটার শেখার সেরা ঠিকানা</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>30 দিনে গিটার বাজান শিখুন</h1>
+        <p class="tagline">Medinipur এর #1 Guitar Academy</p>
+        <p class="trust">✅ 500+ স্টুডেন্ট ✅ AC ক্লাসরুম ✅ গিটার আমরা দেবো ✅ EMI Available</p>
+        <div class="btn-group">
+            <a href="https://wa.me/919800505985?text=Free%20Demo%20Class%20Book%20করতে%20চাই" class="btn btn-whatsapp">
+                Free Demo Book করুন
+            </a>
+            <a href="tel:+919800505985" class="btn btn-call">
+                📞 এখনই কল করুন
+            </a>
+        </div>
+    </section>
+
+    <!-- About -->
     <div class="container">
         <div class="section">
             <h2>আমাদের সম্পর্কে</h2>
-            <p>Sargam Guitar Center এ আমরা beginner থেকে advanced লেভেল পর্যন্ত গিটার শেখাই। Western, Classical, এবং Bollywood স্টাইলে এক্সপার্ট টিচারদের কাছে গিটার শিখুন।</p>
+            <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto;">
+                <strong>Sargam Guitar Center</strong> এ আমরা গত 10 বছর ধরে Medinipur এ সেরা গিটার ট্রেনিং দিচ্ছি। 
+                Beginner থেকে Advanced, Western, Classical, এবং Bollywood - সব স্টাইলে এক্সপার্ট টিচারদের কাছে হাতে-কলমে শিখুন। 
+                আমাদের লক্ষ্য একটাই: <strong>আপনাকে স্টেজে পারফর্ম করার মতো তৈরি করা।</strong>
+            </p>
         </div>
+
+        <!-- Courses -->
         <div class="section">
             <h2>আমাদের কোর্স</h2>
-            <p><strong>1. Beginner Course:</strong> Chords, Strumming, Basic Songs</p>
-            <p><strong>2. Intermediate Course:</strong> Fingerstyle, Scales, Music Theory</p>
-            <p><strong>3. Advanced Course:</strong> Lead Guitar, Improvisation, Live Performance</p>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>Beginner Course</h3>
+                    <div class="price">₹1,999<span style="font-size: 16px; font-weight: 400;">/মাস</span></div>
+                    <ul>
+                        <li>12টা লাইভ ক্লাস</li>
+                        <li>Chords + Strumming</li>
+                        <li>5টা বাংলা/হিন্দি গান</li>
+                        <li>Certificate</li>
+                    </ul>
+                    <a href="https://wa.me/919800505985?text=Beginner%20Course%20এ%20ভর্তি%20হতে%20চাই" class="btn-card">Join Now</a>
+                </div>
+
+                <div class="course-card popular">
+                    <span class="badge">Most Popular</span>
+                    <h3>Intermediate Course</h3>
+                    <div class="price">₹2,499<span style="font-size: 16px; font-weight: 400;">/মাস</span></div>
+                    <ul>
+                        <li>Fingerstyle + Scales</li>
+                        <li>Music Theory Basics</li>
+                        <li>Live Performance Training</li>
+                        <li>Studio Recording 1টা</li>
+                    </ul>
+                    <a href="https://wa.me/919800505985?text=Intermediate%20Course%20এ%20ভর্তি%20হতে%20চাই" class="btn-card">Join Now</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Advanced Course</h3>
+                    <div class="price">₹3,499<span style="font-size: 16px; font-weight: 400;">/মাস</span></div>
+                    <ul>
+                        <li>Lead Guitar + Solo</li>
+                        <li>Improvisation + Composition</li>
+                        <li>Stage Performance 2টা</li>
+                        <li>Career Guidance</li>
+                    </ul>
+                    <a href="https://wa.me/919800505985?text=Advanced%20Course%20এ%20ভর্তি%20হতে%20চাই" class="btn-card">Join Now</a>
+                </div>
+            </div>
         </div>
-        <div class="contact">
-            <h2>যোগাযোগ করুন</h2>
-            <p><strong>ঠিকানা:</strong> Medinipur, West Bengal</p>
-            <p><strong>ফোন:</strong> +91 9800505985</p>
-            <p><strong>Email:</strong> sargamguitarcentar22@gmail.com</p>
-            <a href="tel:+919800505985" class="btn">এখনই কল করুন</a>
-            <a href="https://wa.me/917430070765" class="btn" style="background:#25D366;">WhatsApp করুন</a>
+
+        <!-- Why Us -->
+        <div class="section">
+            <h2>কেন Sargam Guitar Center?</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎸</div>
+                    <h3>ফ্রি গিটার</h3>
+                    <p>ক্লাসে প্র্যাকটিসের জন্য সব গিটার আমরা দেবো। কিনতে হবে না।</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Flexible Timing</h3>
+                    <p>সকাল 7টা থেকে রাত 9টা। স্টুডেন্ট/চাকুরিজীবী সবার জন্য সুবিধা।</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h3>AC ক্লাসরুম</h3>
+                    <p>আরামদায়ক পরিবেশে প্রফেশনাল সেটআপে শিখুন।</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💳</div>
+                    <h3>EMI সুবিধা</h3>
+                    <p>মাসিক কিস্তিতে ফি দেওয়ার সুবিধা আছে।</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Footer Contact -->
+    <footer class="footer">
+        <h2>আজই Demo ক্লাস বুক করুন</h2>
+        <p><strong>ঠিকানা:</strong> Sargam Guitar Center, Keranitola, Medinipur, WB 721101</p>
+        <p><strong>ফোন:</strong> +91 9800505985 | <strong>Email:</strong> sargamguitarcentar22@gmail.com</p>
+        <div class="btn-group">
+            <a href="tel:+919800505985" class="btn btn-call">📞 এখনই কল করুন</a>
+            <a href="https://wa.me/919800505985?text=Free%20Demo%20Class%20চাই" class="btn btn-whatsapp">WhatsApp করুন</a>
+        </div>
+        <p style="margin-top: 40px; opacity: 0.6; font-size: 14px;">© 2026 Sargam Guitar Center. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
