@@ -39,7 +39,6 @@
         .time-table th, .time-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
         .time-table th { background: #1a1a1a; color: white; }
         .time-table td { background: #f9f9f9; }
-        
         .certificate-folder { background: linear-gradient(135deg, #fff5f0 0%, #fff 100%); border: 2px solid #FFE4D6; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 8px 25px rgba(255,107,0,0.08); }
         .certificate-folder h3 { text-align: center; color: #FF6B00; font-size: 22px; margin-bottom: 25px; font-family: 'Poppins', sans-serif; }
         .cert-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
@@ -47,7 +46,6 @@
         .cert-item img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12); transition: 0.3s; border: 3px solid #fff; }
         .cert-item img:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
         .cert-item p { margin-top: 10px; font-size: 14px; color: #666; font-weight: 600; }
-        
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 25px; }
         .gallery-item { border-radius: 8px; overflow: hidden; height: 250px; background: #eee; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
@@ -73,3 +71,74 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 30px; }
             .hero-logo { width: 120px; height: 120px; }
+            .btn-group { flex-direction: column; align-items: center; }
+            .btn { width: 80%; }
+            .section { padding: 25px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="trust-bar">
+        <span><i class="fas fa-award"></i> MSME Govt. Registered</span>
+        <span><i class="fas fa-calendar"></i> Est. 2014</span>
+        <span><i class="fas fa-map-marker-alt"></i> Habibpur, Medinipur</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-logo">
+            <img src="logo.png" alt="Sargam Guitar Center Logo">
+        </div>
+        <div class="badge">🎵 10+ Years of Musical Excellence</div>
+        <h1>Sargam Guitar Center</h1>
+        <p class="tagline">Learn Guitar, Keyboard, Vocal & More</p>
+        <div class="btn-group">
+            <a href="https://wa.me/917430070765" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="tel:+919800505985" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
+            <a href="https://g.co/kgs/3X3X3X3" class="btn btn-google"><i class="fab fa-google"></i> Google Review</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>ক্লাসের নিয়মাবলী</h2>
+            <div class="info-box">
+                <ul>
+                    <li>ভর্তির পর কম করে 3 মাস ক্লাস করতে হবে</li>
+                    <li>মাসের 1 থেকে 10 তারিখের মধ্যে ফিস জমা দিতে হবে</li>
+                    <li>বিনা নোটিশে অনুপস্থিত থাকলে ফিস ফেরত হবে না</li>
+                </ul>
+            </div>
+            <div class="highlight" style="margin-top: 20px;">
+                <strong>নোট:</strong> আমাদের এখানে গিটার, কিবোর্ড, ভোকাল, তবলা, ড্রামস শেখানো হয়। যোগাযোগ: 9800505985
+            </div>
+        </div>
+    </div>
+
+    <!-- Career Section -->
+    <section id="career" style="padding: 30px 15px; text-align: center; background: #f5f5f5;">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 15px;">We Are Hiring</h2>
+        
+        <p style="font-size: 16px; font-weight: 600; color: #222; margin-bottom: 20px;">
+            Female Candidate Required For: <br/>
+            Online Marketing, Telecalling, Student Generate
+        </p>
+
+        <a href="https://wa.me/917430070765?text=Hi, I am interested in the job for Online Marketing / Telecalling / Student Generate. I am attaching my CV." 
+           style="background: #25D366; color: white; padding: 12px 28px; border-radius: 6px; font-weight: bold; text-decoration: none; display: inline-block;">
+           Apply Now on WhatsApp
+        </a>
+    </section>
+
+    <footer class="footer">
+        <h2>Sargam Guitar Center</h2>
+        <p><strong>প্রোপ্রাইটর:</strong> Sujit Karmakar</p>
+        <p><strong>ঠিকানা:</strong> 198, Habibpur Kaliteli, Medinipur, West Bengal 721101</p>
+        <p><strong>Phone:</strong> 9800505985 | <strong>WhatsApp:</strong> 7430070765</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/sargamguitarcenter" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com/@sargamguitarcenter" class="social-btn yt"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/sargamguitarcenter" class="social-btn insta"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
