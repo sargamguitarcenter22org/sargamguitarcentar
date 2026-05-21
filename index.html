@@ -1,205 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sargam Guitar Center - Govt. Registered | MSME | Est. 2014 | Medinipur</title>
-    <meta name="google-site-verification" content="caYz7Fw5elbrq4GXuU3NY6KyR9GFelb8uEor3ADnCUs" />
-    <meta name="description" content="Sargam Guitar Center - MSME Govt. Registered Music School. Est. 2014. Habibpur, Medinipur. Call: 9800505985">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', 'Hind Siliguri', sans-serif; color: #1a1a1a; line-height: 1.7; background: #fafafa; }
-        .trust-bar { background: #1a1a1a; color: white; text-align: center; padding: 8px; font-size: 14px; }
-        .trust-bar span { margin: 0 10px; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('event1.jpg') center/cover; color: white; text-align: center; padding: 60px 20px 70px; }
-        .hero-logo { width: 150px; height: 150px; margin: 0 auto 20px; border-radius: 50%; border: 4px solid #FF6B00; box-shadow: 0 0 20px rgba(255,107,0,0.5); background: white; padding: 5px; }
-        .hero-logo img { width: 100%; height: 100%; border-radius: 50%; object-fit: contain; }
-        .hero .badge { background: #FF6B00; display: inline-block; padding: 6px 15px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 15px; }
-        .hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 10px; }
-        .hero .tagline { font-size: 20px; margin-bottom: 25px; opacity: 0.9; }
-        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        .btn { padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 17px; transition: 0.3s; }
-        .btn-whatsapp { background: #25D366; color: white; }
-        .btn-call { background: #FF6B00; color: white; }
-        .btn-google { background: #4285F4; color: white; }
-        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
-        .section { margin-bottom: 50px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .section h2 { font-size: 32px; text-align: center; margin-bottom: 30px; position: relative; padding-bottom: 15px; font-family: 'Poppins', sans-serif; }
-        .section h2:after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 70px; height: 4px; background: #FF6B00; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .info-box { border-left: 4px solid #FF6B00; padding: 15px 20px; background: #fff9f5; }
-        .info-box h3 { font-size: 18px; margin-bottom: 8px; color: #FF6B00; }
-        .info-box ul { list-style: none; padding-left: 0; }
-        .info-box li:before { content: '✓ '; font-weight: bold; }
-        .time-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .time-table th, .time-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
-        .time-table th { background: #1a1a1a; color: white; }
-        .time-table td { background: #f9f9f9; }
-        .certificate-folder { background: linear-gradient(135deg, #fff5f0 0%, #fff 100%); border: 2px solid #FFE4D6; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 8px 25px rgba(255,107,0,0.08); }
-        .certificate-folder h3 { text-align: center; color: #FF6B00; font-size: 22px; margin-bottom: 25px; font-family: 'Poppins', sans-serif; }
-        .cert-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .cert-item { text-align: center; }
-        .cert-item img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.12); transition: 0.3s; border: 3px solid #fff; }
-        .cert-item img:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
-        .cert-item p { margin-top: 10px; font-size: 14px; color: #666; font-weight: 600; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 25px; }
-        .gallery-item { border-radius: 8px; overflow: hidden; height: 250px; background: #eee; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
-        .gallery-item img:hover { transform: scale(1.05); }
-        .map-container { width: 100%; height: 350px; border-radius: 12px; overflow: hidden; margin-top: 20px; border: 2px solid #eee; }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
-        .jd-badge { background: #0076d7; color: white; padding: 20px; border-radius: 8px; text-align: center; margin-top: 20px; }
-        .jd-badge h4 { font-size: 18px; margin-bottom: 8px; }
-        .jd-badge p { font-size: 14px; opacity: 0.9; margin-bottom: 15px; }
-        .review-box { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px; margin-top: 25px; text-align: center; }
-        .review-box h4 { color: #1a1a1a; margin-bottom: 15px; font-size: 20px; }
-        .review-box .stars { color: #FFB400; font-size: 24px; margin-bottom: 15px; }
-        .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 25px; flex-wrap: wrap; }
-        .social-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; text-decoration: none; transition: 0.3s; }
-        .social-btn:hover { transform: translateY(-3px); }
-        .fb { background: #1877F2; }
-        .yt { background: #FF0000; }
-        .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .highlight { background: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffe69c; margin: 20px 0; }
-        .highlight strong { color: #b45309; }
-        .footer { background: #1a1a1a; color: white; padding: 40px 20px; text-align: center; }
-        .footer p { margin: 8px 0; font-size: 17px; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 30px; }
-            .hero-logo { width: 120px; height: 120px; }
-            .btn-group { flex-direction: column; align-items: center; }
-            .btn { width: 80%; }
-            .section { padding: 25px 15px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sargam Guitar Center</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f8f9fa;color:#333}
+.top-bar{background:#1a1a1a;color:#fff;text-align:center;padding:8px;font-size:13px}
+.top-bar span{margin:0 10px;color:#4caf50}
+.header{background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('banner.jpg') center/cover;text-align:center;padding:40px 20px;color:#fff}
+.header img{width:100px;height:100px;border-radius:50%;border:4px solid #ff9800;margin-bottom:15px}
+.badge{background:#ff9800;color:#fff;padding:8px 20px;border-radius:20px;display:inline-block;margin:10px 0}
+.header h1{font-size:28px;margin:10px 0}
+.btn{display:inline-block;padding:12px 25px;margin:8px;border-radius:8px;text-decoration:none;font-weight:600;color:#fff}
+.btn-green{background:#25D366}
+.btn-orange{background:#ff5722}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.section{background:#fff;margin:25px 0;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.08)}
+.section h2{text-align:center;font-size:24px;margin-bottom:15px}
+.section h2::after{content:'';display:block;width:60px;height:3px;background:#ff9800;margin:10px auto}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:25px}
+.cert-card{background:#fff;padding:15px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);text-align:center}
+.cert-card img{width:100%;border-radius:8px}
+.cert-card p{color:#ff9800;font-weight:600;margin-top:10px}
+.map-container iframe{width:100%;height:350px;border:0;border-radius:10px}
+.review-box{background:#f5f5f5;padding:20px;border-radius:10px;text-align:center;margin:20px 0}
+.review-box .stars{color:#ffc107;font-size:24px}
+.btn-blue{background:#2196F3;display:block;text-align:center}
+.social{text-align:center;margin:20px 0}
+.social a{width:45px;height:45px;display:inline-block;line-height:45px;text-align:center;border-radius:50%;color:#fff;margin:0 5px;font-size:20px}
+.social .fb{background:#3b5998}
+.social .yt{background:#ff0000}
+.social .insta{background:#e4405f}
+.rules li{list-style:none;padding:10px 0;padding-left:30px;position:relative}
+.rules li::before{content:'✓';position:absolute;left:0;color:#4caf50;font-weight:bold;font-size:20px}
+.footer{background:#1a1a1a;color:#fff;text-align:center;padding:30px 20px;margin-top:40px}
+</style>
 </head>
 <body>
-    <div class="trust-bar">
-        <span><i class="fas fa-award"></i> MSME Govt. Registered</span>
-        <span><i class="fas fa-calendar"></i> Est. 2014</span>
-        <span><i class="fas fa-map-marker-alt"></i> Habibpur, Medinipur</span>
-    </div>
 
-    <div class="hero">
-        <div class="hero-logo">
-            <img src="logo.png" alt="Sargam Guitar Center Logo">
-        </div>
-        <div class="badge">🎵 10+ Years of Musical Excellence</div>
-        <h1>Sargam Guitar Center</h1>
-        <p class="tagline">Learn Guitar, Keyboard, Vocal & More</p>
-        <div class="btn-group">
-            <a href="https://wa.me/917430070765" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
-            <a href="tel:+919800505985" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
-            <a href="https://g.co/kgs/3X3X3X3" class="btn btn-google"><i class="fab fa-google"></i> Google Review</a>
-        </div>
-    </div>
+<div class="top-bar">
+<span>✓ MSME Govt. Registered</span>
+<span>✓ Est. 2014</span>
+<span>✓ Principal: Sujit Karmakar</span>
+</div>
 
-    <div class="container">
-        <div class="section">
-            <h2>ক্লাসের নিয়মাবলী</h2>
-            <div class="info-box">
-                <ul>
-                    <li>ভর্তির পর কম করে 3 মাস ক্লাস করতে হবে</li>
-                    <li>মাসের 1 থেকে 10 তারিখের মধ্যে ফিস জমা দিতে হবে</li>
-                    <li>বিনা নোটিশে অনুপস্থিত থাকলে ফিস ফেরত হবে না</li>
-                </ul>
-            </div>
-            <div class="highlight" style="margin-top: 20px;">
-                <strong>নোট:</strong> আমাদের এখানে গিটার, কিবোর্ড, ভোকাল, তবলা, ড্রামস শেখানো হয়। যোগাযোগ: 9800505985
-            </div>
-        </div>
-    </div>
+<div class="header">
+<img src="logo.png" alt="SGC Logo">
+<div class="badge">UDYAM-WB-16-0024830 | Govt. of India Certified</div>
+<h1>Sargam Guitar Center</h1>
+<p>Affiliated Music & Art Training Center | Habibpur, Medinipur</p>
+<a href="https://wa.me/917430070765" class="btn btn-green"><i class="fab fa-whatsapp"></i> WhatsApp: 7430070765</a>
+<a href="tel:9800505985" class="btn btn-orange"><i class="fas fa-phone"></i> Call: 9800505985</a>
+</div>
 
-    
-        <div class="section">
-            <h2>আমাদের সার্টিফিকেট</h2>
-            <div class="certificate-folder">
-                <h3><i class="fas fa-certificate"></i> Govt. Registered Certificates</h3>
-                <div class="cert-gallery">
-                    <div class="cert-item">
-                        <img src="msme.jpg" alt="MSME Certificate">
-                        <p>MSME Registration</p>
-                    </div>
-                    <div class="cert-item">
-                        <img src="certificate.jpg" alt="Music Certificate">
-                        <p>Music Certificate</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
 
-        <div class="section">
-            <h2>গ্যালারি</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="event1.jpg" alt="Event 1"></div>
-                <div class="gallery-item"><img src="event2.jpg" alt="Event 2"></div>
-                <div class="gallery-item"><img src="event3.jpg" alt="Event 3"></div>
-            </div>
-        </div>
+<div class="section">
+<h2>সরকারি স্বীকৃতি ও অ্যাফিলিয়েশন</h2>
+<div class="cert-grid">
+<div class="cert-card">
+<img src="msme.jpg" alt="MSME Certificate">
+<p>MSME Certified - UDYAM-WB-16-0024830</p>
+</div>
+<div class="cert-card">
+<img src="certificate.jpg" alt="Chhaya School Certificate">
+<p>Chhaya School of Art - Reg: 2093</p>
+</div>
+<div class="cert-card">
+<img src="startup.jpg" alt="Startup India">
+<p>Startup India Certified</p>
+</div>
+</div>
+<p style="text-align:center;margin-top:20px;color:#666">Established 2014 | Principal: Sujit Karmakar</p>
+</div>
 
-        <div class="section">
-            <h2>ক্লাসের সময়</h2>
-            <table class="time-table">
-                <tr>
-                    <th>দিন</th>
-                    <th>সময়</th>
-                </tr>
-                <tr>
-                    <td>সোম - শনি</td>
-                    <td>সকাল 10টা - রাত 8টা</td>
-                </tr>
-                <tr>
-                    <td>রবিবার</td>
-                    <td>বন্ধ</td>
-                </tr>
-            </table>
-        <div>
+<div class="section">
+<h2>যোগাযোগ ও লোকেশন</h2>
+<p style="text-align:center;margin-bottom:15px">ঠিকানা: 198, Habibpur Kalitala Chawk, Paschim Medinipur, WB - 721101</p>
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.327556690799!2d87.3259113149398!3d22.34027984747815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d440b8a7b3b3b%3A0x3a1d440b8a7b3b3b!2sSargam%20Guitar%20Center!5e0!3m2!1sen!2sin!4v1670000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+</div>
 
-        <div class="section">
-            <h2>আমাদের ঠিকানা</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.327556690799!2d87.3259113149398!3d22.34027984747815!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d440b8a7b3b3b%3A0x3a1d440b8a7b3b3b!2sSargam%20Guitar%20Center!5e0!3m2!1sen!2sin!4v1670000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="jd-badge">
-                <h4>Justdial Verified</h4>
-                <p>আমরা Justdial এ ভেরিফাইড</p>
-            </div>
-            <div class="review-box">
-                <h4>Google Reviews</h4>
-                <div class="stars">★★★★★</div>
-                <p>4.9/5 - 100+ Reviews</p>
-            </div>
-        </div>
-    <<div>
-    <!-- Career Section -->
-    <section id="career" style="padding: 30px 15px; text-align: center; background: #f5f5f5;">
-        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 15px;">We Are Hiring</h2>
-        
-        <p style="font-size: 16px; font-weight: 600; color: #222; margin-bottom: 20px;">
-            Female Candidate Required For: <br/>
-            Online Marketing, Telecalling, Student Generate
-        </p>
+<div class="review-box">
+<h4><i class="fas fa-star" style="color:#ffc107"></i> Google Maps Reviews</h4>
+<div class="stars">★★★</div>
+<p>4.9/5 - 100+ Reviews</p>
+<a href="#" class="btn btn-orange" style="margin-top:15px">Google এ সব রিভিউ দেখুন</a>
+</div>
 
-        <a href="https://wa.me/917430070765?text=Hi, I am interested in the job for Online Marketing / Telecalling / Student Generate. I am attaching my CV." 
-           style="background: #25D366; color: white; padding: 12px 28px; border-radius: 6px; font-weight: bold; text-decoration: none; display: inline-block;">
-           Apply Now on WhatsApp
-        </a>
-    </section>
+<div style="background:#2196F3;color:#fff;padding:20px;border-radius:10px;text-align:center">
+<h4>JUST DIAL VERIFIED</h4>
+<p>আমরা Just Dial এ ভেরিফাইড। আমাদের রেটিং ও রিভিউ দেখুন</p>
+<a href="#" class="btn" style="background:#fff;color:#2196F3;margin-top:10px">Just Dial Profile & Reviews</a>
+</div>
 
-    <footer class="footer">
-        <h2>Sargam Guitar Center</h2>
-        <p><strong>প্রোপ্রাইটর:</strong> Sujit Karmakar</p>
-        <p><strong>ঠিকানা:</strong> 198, Habibpur Kaliteli, Medinipur, West Bengal 721101</p>
-        <p><strong>Phone:</strong> 9800505985 | <strong>WhatsApp:</strong> 7430070765</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/sargamguitarcenter" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://youtube.com/@sargamguitarcenter" class="social-btn yt"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/sargamguitarcenter" class="social-btn insta"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
+<div class="social">
+<h4 style="margin:20px 0">সোশাল মিডিয়ায় যুক্ত থাকুন</h4>
+<a href="https://www.facebook.com/sargamguitarcenter" class="fb"><i class="fab fa-facebook-f"></i></a>
+<a href="https://youtube.com/@sargamguitarcenter" class="yt"><i class="fab fa-youtube"></i></a>
+<a href="https://www.instagram.com/sargamguitarcenter" class="insta"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+
+<div class="section">
+<h2>ক্লাসের নিয়মাবলী</h2>
+<ul class="rules">
+<li>ভর্তির পর কম করে 6 মাস ক্লাস করতে হবে।</li>
+<li>ভর্তির আগে সিটটা ফিক্স করে নিতে হবে।</li>
+<li>প্রতিদিন 1 ঘন্টা করে বাড়িতে প্র্যাকটিস বাধ্যতামূলক।</li>
+<li>বিনা কারণে 2 দিনের বেশি ক্লাস অফ করলে Application দিতে হবে।</li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer">
+<h3>Sargam Guitar Center</h3>
+<p>198, Habibpur Kalitala Chawk, Medinipur, West Bengal 721101</p>
+<p>Phone: 9800505985 | WhatsApp: 7430070765</p>
+<p style="margin-top:15px;color:#888">© 2024 Sargam Guitar Center. All Rights Reserved.</p>
+</div>
+
 </body>
 </html>
